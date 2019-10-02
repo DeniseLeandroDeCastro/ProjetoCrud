@@ -1,0 +1,37 @@
+<p-panel >
+    <p-header>
+        <h2>Sistema de Cadastro de Usuários</h2>
+        <div>
+            <a routerLink="/login">Login</a> |
+            <a routerLink="/clientes">Clientes</a>
+        </div>
+    </p-header>
+
+    <form (ngSubmit)="onLogin()">
+        <table>
+          <tr>
+            <td>Usuário</td>
+            <td><input type="text" name="usuario" [(ngModel)]="usuario" /></td>
+          </tr>
+          <tr>
+            <td>Senha</td>
+            <td><input type="password" name="senha" [(ngModel)]="senha" /></td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: right">
+                <button pButton type="button" label="Login"></button>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: center">
+              {{ mensagemErro }}
+            </td>
+          </tr>
+        </table>
+    </form>
+    <p-footer center>
+        IFRN - Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte, Denise M. Leandro de Castro
+    </p-footer>
+</p-panel>
+
+
